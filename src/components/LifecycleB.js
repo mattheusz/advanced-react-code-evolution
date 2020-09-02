@@ -10,12 +10,26 @@ export default class LifecycleB extends Component {
     }
 
     static getDerivedStateFromProps(nextProps, prevState) { // Rarely Used
-        console.log('Lifecyle B - getDeriverdStateFromProps');
+        console.log('Lifecyle B - getDerivedStateFromProps');
+        return null;
+    }
+
+    shouldComponentUpdate(nextProps, nextState) {
+        console.log('Lifecyle B - shouldComponentUpdate');
+        return true;
+    }
+
+    getSnapshotBeforeUpdate(prevProps, prevUpdate) {
+        console.log('Lifecyle B - getSnapshotBeforeUpdate');
         return null;
     }
 
     componentDidMount() {
         console.log('Lifecyle B - componentDidMount');
+    }
+
+    componentDidUpdate() {
+        console.log('Lifecyle B - componentDidUpdate');
     }
 
     render() {
