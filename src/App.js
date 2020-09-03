@@ -1,10 +1,11 @@
 import React from 'react';
 import './App.css';
-import FragmentDemo from './components/FragmentDemo';
+import ParentComponent from './components/ParentComponent';
 
 function App() {
+  console.log('App is render');
   return (
-    <FragmentDemo />
+    <ParentComponent />
   )
 }
 
