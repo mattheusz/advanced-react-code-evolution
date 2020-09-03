@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.css';
-import ParentComponent from './components/ParentComponent';
+import RefsDemo from './components/RefsDemo';
 
 function App() {
   console.log('App is render');
   return (
-    <ParentComponent />
+    <RefsDemo />
   )
 }
 
