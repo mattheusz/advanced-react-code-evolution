@@ -1,20 +1,23 @@
 import React, { Component } from 'react';
+import Input from './Input';
 
 class RefsDemo extends Component {
 
     constructor(props) {
         super(props);
-        this.inputRef = React.createRef();
+        this.inputRef = React.createRef();  // #1 criando uma ref
     }
 
-    componentDidMount() {
-        this.inputRef.current.focus();
+    focus = () => {
+        this.inputRef.current.focusInput();
     }
 
     render() {
         return (
             <div>
-                <input type='text' ref={this.inputRef} />
+                <Input ref={this.inputRef} />
+                <br />
+                <button onClick={this.focus}>Foque no input acima</button>
             </div>
         );
     }
