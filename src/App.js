@@ -1,11 +1,20 @@
 import React from 'react';
-import PortalDemo from './components/PortalDemo'
 import './App.css';
+import Hero from './components/Hero';
+import ErrorBoundary from './components/ErrorBoundary';
 
 function App() {
   console.log('App is render');
   return (
-    <PortalDemo />
+    <div>
+      <Hero heroName='Batman' />
+      <ErrorBoundary >
+
+        <Hero heroName='Superman' />
+        <Hero heroName='Joker' />
+      </ErrorBoundary>
+    </div>
+
   )
 }
 
