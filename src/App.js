@@ -7,8 +7,8 @@ function App() {
   console.log('App is render');
   return (
     <div>
-      <ClickCounter />
-      <HoverCounter />
+      <ClickCounter nome='Matheus' />
+      <HoverCounter nome='Matheus' />
     </div>
 
   )

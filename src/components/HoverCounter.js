@@ -1,17 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
+import withCounter from './withCounter';
 
 function HoverCounter(props) {
-    const [state, setstate] = useState(0);
 
-    const incrementCount = () => {
-        setstate(state + 1);
-    }
+    const { incrementCount, count, nome } = props;
 
     return (
         <div>
-            <h1 onMouseOver={incrementCount}>Hovered {state} times</h1>
+            <h1 onMouseOver={incrementCount}>{nome} Hovered {count} times</h1>
         </div>
     );
 }
 
-export default HoverCounter;
+export default withCounter(HoverCounter);
