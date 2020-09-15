@@ -1,25 +1,15 @@
 import React from 'react';
 import './App.css';
-import ClickCounter from './components/ClickCounter';
-import User from './components/User';
-import Counter from './components/Counter';
-import HoverCounter from './components/HoverCounter';
+import ComponentC from './components/ComponentC';
+import { UserProvider } from './components/userContext';
 
 function App() {
-  console.log('App is render');
   return (
     <div>
-      <Counter render={(count, increment) => {
-        return <ClickCounter count={count} increment={increment} />
-      }} />
-      <hr />
+      <UserProvider value="Matheus 21">
+        <ComponentC />
+      </UserProvider>
 
-      <Counter render={(count, increment) => {
-        return <HoverCounter count={count} increment={increment} />
-      }} />
-      <hr />
-
-      <User render={(isLogged) => isLogged ? 'Matheus' : 'Guest'} />
     </div>
 
   )
