@@ -1,15 +1,14 @@
 import React from 'react';
 import './App.css';
-import ComponentC from './components/ComponentC';
-import { UserProvider } from './components/userContext';
+import UserList from "./components/UserList";
+import UserForm from './components/UserForm';
 
 function App() {
   return (
     <div>
-      <UserProvider value="Matheus 21">
-        <ComponentC />
-      </UserProvider>
-
+      <UserList />
+      <hr />
+      <UserForm />
     </div>
 
   )
